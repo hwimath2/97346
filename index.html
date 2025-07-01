@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title id="pageTitle"></title>
+<!-- ==================== 게임 설정 및 문제 데이터======================= -->
 <script>
   /* 게임 설정 및 문제 데이터 */
   const gameConfig = {
@@ -280,7 +281,7 @@
       --next-button-text: "다음문제";               /* 다음 버튼 텍스트 */
       --complete-button-text: "완료";               /* 완료 버튼 텍스트 */
       --check-button-text: "확인";                /* 확인 버튼 텍스트 */
-      /* --submit-button-text: "전송하기"; */             /* 전송 버튼 텍스트 (삭제) */
+      --submit-button-text: "전송하기";             /* 전송 버튼 텍스트 */
       --result-title-text: "게임 종료";               /* 결과 화면 제목 */
 
       /* ----- 시스템 메시지 ----- */
@@ -335,16 +336,16 @@
       --next-button-dark: #262142;  /* 다음 버튼 어두운 버전 */
 
       /* ----- 완료 버튼 색상 ----- */
-      --complete-button-color: #f39c12; /* 완료 버튼 배경색 */
-      --complete-button-dark: #d35400;  /* 완료 버튼 어두운 색상 */
+      --complete-button-color: #8957a1; /* 완료 버튼 배경색 */
+      --complete-button-dark: #7a4391;  /* 완료 버튼 어두운 색상 */
 
       /* ----- 확인 버튼 색상 ----- */
       --check-button-color: #3498db; /* 확인 버튼 배경색 */
       --check-button-dark: #2980b9;  /* 확인 버튼 어두운 버전 */
 
       /* ----- 제출 버튼 색상 ----- */
-      /* --submit-button-color: #f39c12; */ /* 제출 버튼 배경색 (삭제) */
-      /* --submit-button-dark: #d35400; */  /* 제출 버튼 어두운 버전 (삭제) */
+      --submit-button-color: #f39c12; /* 제출 버튼 배경색 */
+      --submit-button-dark: #d35400;  /* 제출 버튼 어두운 버전 */
 
       /* ----- 객관식 옵션 색상 ----- */
       --option-color: #3498db;           /* 객관식 옵션 버튼 기본 색상 */
@@ -484,7 +485,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.134 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%2393c5fd' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+      background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%2393c5fd' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
       opacity: var(--body-pattern-opacity);
       z-index: -1;
     }
@@ -875,25 +876,25 @@
         0 9px 0 rgba(0,0,0,0.1),
         0 0 12px rgba(137, 87, 161, 0.4);
     }
-    /* #submitButton { */
-    /* background-color: var(--submit-button-color); */
-    /* box-shadow: */
-    /* 0 0 0 1px rgba(0,0,0,0.1), */
-    /* 0 2px 0 rgba(0,0,0,0.1), */
-    /* 0 4px 0 var(--submit-button-dark), */
-    /* 0 6px 0 rgba(0,0,0,0.1), */
-    /* 0 8px 0 rgba(0,0,0,0.1), */
-    /* 0 0 10px rgba(0,0,0,0.2); */
-    /* } */
-    /* #submitButton:hover { */
-    /* box-shadow: */
-    /* 0 0 0 1px rgba(0,0,0,0.1), */
-    /* 0 3px 0 rgba(0,0,0,0.1), */
-    /* 0 5px 0 var(--submit-button-dark), */
-    /* 0 7px 0 rgba(0,0,0,0.1), */
-    /* 0 9px 0 rgba(0,0,0,0.1), */
-    /* 0 0 12px rgba(0,0,0,0.2); */
-    /* } */
+    #submitButton {
+      background-color: var(--submit-button-color);
+      box-shadow:
+        0 0 0 1px rgba(0,0,0,0.1),
+        0 2px 0 rgba(0,0,0,0.1),
+        0 4px 0 var(--submit-button-dark),
+        0 6px 0 rgba(0,0,0,0.1),
+        0 8px 0 rgba(0,0,0,0.1),
+        0 0 10px rgba(0,0,0,0.2);
+    }
+    #submitButton:hover {
+      box-shadow:
+        0 0 0 1px rgba(0,0,0,0.1),
+        0 3px 0 rgba(0,0,0,0.1),
+        0 5px 0 var(--submit-button-dark),
+        0 7px 0 rgba(0,0,0,0.1),
+        0 9px 0 rgba(0,0,0,0.1),
+        0 0 12px rgba(0,0,0,0.2);
+    }
     #checkButton {
       background-color: var(--check-button-color);
       box-shadow:
@@ -1554,6 +1555,7 @@
       <div class="result-title">게임 종료</div>
       <div class="result-info" id="finalScore"></div>
       <div class="result-info" id="finalTime"></div>
+      <button class="btn" id="submitButton">전송하기</button>
       <div id="serverMessage" class="server-message"></div>
     </div>
   </div>
@@ -1582,7 +1584,7 @@
   const NEXT_BUTTON_TEXT = "다음문제";
   const COMPLETE_BUTTON_TEXT = "완료";
   const CHECK_BUTTON_TEXT = "확인";
-  // const SUBMIT_BUTTON_TEXT = "전송하기"; // 삭제됨
+  const SUBMIT_BUTTON_TEXT = "전송하기";
   const RESULT_TITLE_TEXT = "게임 종료";
 
   const SUCCESS_MESSAGE = "성공: 데이터가 성공적으로 전송되었습니다.";
@@ -1634,7 +1636,7 @@
     multipleChoice: document.getElementById('multipleChoice'),
     shortAnswer: document.getElementById('shortAnswer'),
     nextButton: document.getElementById('nextButton'),
-    // submitButton: document.getElementById('submitButton'), // 삭제됨
+    submitButton: document.getElementById('submitButton'),
     finalScore: document.getElementById('finalScore'),
     finalTime: document.getElementById('finalTime'),
     serverMessage: document.getElementById('serverMessage'),
@@ -1944,28 +1946,15 @@
       const confirmBtn = document.getElementById('checkButton');
       if(confirmBtn) { confirmBtn.disabled = (selectedOptions.length === 0); }
     } else {
-      // 객관식 단일 선택
       answerSubmitted = true;
       perQuestionTimerFunctions.stop(); // 문제별 타이머 정지
       const isCorrect = userAnswer === String(q.answer);
-
-      // 모든 옵션에서 'selected' 클래스 제거
-      elements.multipleChoice.querySelectorAll('.option').forEach(opt => {
-          opt.classList.remove('selected', 'correct', 'incorrect');
-      });
-
       if(isCorrect) {
         selectedOption.classList.add("correct");
         score += q.score || defaultScore;
         elements.currentScore.textContent = score;
       } else {
         selectedOption.classList.add("incorrect");
-        // 정답 옵션에 correct 클래스 추가하여 시각적으로 표시
-        elements.multipleChoice.querySelectorAll('.option').forEach(opt => {
-            if (opt.getAttribute('data-option') === String(q.answer)) {
-                opt.classList.add('correct');
-            }
-        });
       }
       userAnswers.push({
         questionId: q.id, userAnswer: userAnswer, correctAnswer: q.answer,
@@ -1973,7 +1962,7 @@
       });
       elements.nextButton.disabled = false;
       document.querySelectorAll('.option').forEach(opt => {
-        opt.style.pointerEvents = 'none'; // 클릭 방지
+        opt.style.pointerEvents = 'none';
       });
     }
   }
@@ -1985,7 +1974,7 @@
     perQuestionTimerFunctions.stop(); // 문제별 타이머 정지
 
     let allCorrect = true;
-    const correctAnswers = Array.isArray(q.answer) ? q.answer.map(String) : [String(q.answer)];
+    const correctAnswers = q.answer.map(String);
     const userAnswersStr = selectedOptions.map(String);
 
     if(userAnswersStr.length !== correctAnswers.length) {
@@ -1999,18 +1988,12 @@
       const optVal = opt.getAttribute('data-option');
       const isSelected = userAnswersStr.includes(optVal);
       const isCorrectAnswer = correctAnswers.includes(optVal);
-
-      // 선택된 옵션에 대한 피드백
       if(isSelected) {
         if(isCorrectAnswer) {
           opt.classList.add("correct");
         } else {
           opt.classList.add("incorrect");
         }
-      }
-      // 선택되지 않았지만 정답인 옵션에 대한 피드백
-      else if (!isSelected && isCorrectAnswer) {
-          opt.classList.add("correct"); // 사용자가 선택하지 않았지만 정답인 경우에도 표시
       }
       opt.style.pointerEvents = 'none';
     });
@@ -2052,16 +2035,13 @@
         const userAns = input.value.trim();
         userAnswerArray.push(userAns);
         const correctAns = Array.isArray(q.answer) ? String(q.answer[index]) : String(q.answer);
-
         if(userAns !== correctAns) {
             isCorrectOverall = false;
             input.classList.add('incorrect');
-            // 오답일 경우 정답을 표시 (주관식은 정답을 보여주지 않지만, 필요 시 여기에 로직 추가)
-            // 예: input.value = `${userAns} (정답: ${correctAns})`;
         } else {
             input.classList.add('correct');
         }
-        input.readOnly = true; // 정답 제출 후 입력 필드 비활성화
+        input.readOnly = true;
     });
 
     if(isCorrectOverall) {
@@ -2072,7 +2052,7 @@
     const checkButton = document.getElementById('checkButton');
     if(checkButton) {
         checkButton.disabled = true;
-        checkButton.style.pointerEvents = 'none'; // 클릭 방지
+        checkButton.style.pointerEvents = 'none';
     }
     userAnswers.push({
         questionId: q.id, userAnswer: userAnswerArray, correctAnswer: q.answer,
@@ -2080,17 +2060,13 @@
     });
   }
 
-  elements.nextButton.addEventListener('click', async () => { // async 추가
+  elements.nextButton.addEventListener('click', () => {
     if (elements.nextButton.disabled) return;
     completedQuestions++;
     updateProgressBar();
     if (currentQuestion >= questions.length - 1) {
-        // 마지막 문제인 경우, 완료 애니메이션 실행 후 게임 종료 및 데이터 전송
-        await triggerCompletionAnimation(); // 애니메이션 완료 대기
-        endGame(true); // 게임 종료 및 결과 화면 표시
-        await sendResultData(); // 결과 데이터 전송 시도
+        triggerCompletionAnimation().then(() => { endGame(true); });
     } else {
-        // 다음 문제로 이동
         currentQuestion++;
         loadQuestion(currentQuestion);
     }
@@ -2148,28 +2124,22 @@
     }
   }
 
-  async function sendResultData() { // 새로운 전송 함수
+  elements.submitButton.addEventListener('click', async () => {
     const game = gameConfig.gameTitle;
     const finalScoreValue = score;
     const finalElapsedTimeValue = elapsedTime;
-
-    if (!player) {
-        elements.serverMessage.textContent = "플레이어 이름 정보가 없어 결과를 전송할 수 없습니다. 새로고침 후 다시 시도해주세요.";
-        elements.serverMessage.classList.add("error");
-        return;
-    }
-
+     if (!player) {
+         alert("플레이어 이름 정보가 없습니다. 게임을 다시 시작해주세요.");
+         return;
+     }
     elements.loadingSpinner.style.display = "flex";
     elements.serverMessage.textContent = "";
     elements.serverMessage.className = "server-message";
-
-    let sendSuccess = false;
-    let errorMessage = "";
-
+    elements.submitButton.disabled = true;
     try {
       const dataToSend = {
         game: game, name: player, score: parseInt(finalScoreValue, 10),
-        maxScore: questions.reduce((sum, q) => sum + (q.score || defaultScore), 0),
+        maxScore: questions.length * (defaultScore), // 기본 점수 기준으로 만점 계산 (문제별 점수 다를 시 수정 필요)
         elapsedTime: parseInt(finalElapsedTimeValue, 10)
       };
       console.log("Sending data:", dataToSend);
@@ -2177,25 +2147,15 @@
       console.log("Server response:", result);
       elements.serverMessage.textContent = SUCCESS_MESSAGE;
       elements.serverMessage.classList.add("success");
-      sendSuccess = true;
     } catch (error) {
       console.error("Submission failed:", error);
-      errorMessage = error.message || ERROR_MESSAGE;
-      elements.serverMessage.textContent = errorMessage;
+      elements.serverMessage.textContent = error.message || ERROR_MESSAGE;
       elements.serverMessage.classList.add("error");
-      sendSuccess = false;
+      elements.submitButton.disabled = false;
     } finally {
       elements.loadingSpinner.style.display = "none";
     }
-
-    if (!sendSuccess) {
-      const retryConfirmation = confirm(`결과 전송에 실패했습니다: ${errorMessage}\n다시 시도하시겠습니까?`);
-      if (retryConfirmation) {
-        await sendResultData(); // 재귀적으로 재시도
-      }
-    }
-  }
-
+  });
 
   function endGame(completed) {
     gameOver = true;
@@ -2210,7 +2170,7 @@
 
     elements.finalScore.innerHTML = `최종 점수: <strong style="color: var(--score-highlight-color); font-size: 1.2em;">${score}</strong>점 / ${maxScore}점<br><span style="font-size:1.5em; font-weight:bold;">${accuracy}%</span>`;
     elements.finalTime.textContent = `총 소요 시간: ${timerFunctions.formatTime(elapsedTime)}`;
-    // elements.submitButton.disabled = false; // 삭제됨
+    elements.submitButton.disabled = false;
     elements.serverMessage.textContent = '';
     elements.serverMessage.className = 'server-message';
   }
@@ -2222,7 +2182,7 @@
     elements.playerName.placeholder = PLAYER_NAME_PLACEHOLDER;
     document.querySelector('#startSection .start-title').textContent = START_SCREEN_TITLE;
     elements.nextButton.textContent = NEXT_BUTTON_TEXT;
-    // elements.submitButton.textContent = SUBMIT_BUTTON_TEXT; // 삭제됨
+    elements.submitButton.textContent = SUBMIT_BUTTON_TEXT;
     document.querySelector('#resultSection .result-title').textContent = RESULT_TITLE_TEXT;
     if (bannerURL) {
       elements.banner.style.display = "block";
